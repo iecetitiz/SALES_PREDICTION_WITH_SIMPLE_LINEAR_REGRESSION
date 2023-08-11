@@ -22,7 +22,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 
 # Simple Linear Regression 
 
-df = pd.read_csv("C:/datasets/machine_learning/advertising.csv")
+df = pd.read_csv("advertising.csv")
 
 
 X = df[["TV"]] 
@@ -53,11 +53,22 @@ plt.ylim(bottom=0)
 plt.show()
 
 
+# Prediction Performance Evaluation
+
+#MSE
+y_pred = reg_model.predict(X)
+mse = mean_squared_error(y, y_pred)
 
 
+#RMSE
+rmse = np.sqrt(mean_squared_error(y, y_pred))
+
+#MAE
+mae = mean_absolute_error(y, y_pred)
 
 
-
+#R-Square
+rs= reg_model.score(X, y)
 
 
 
