@@ -21,6 +21,8 @@ from sklearn.model_selection import train_test_split, cross_val_score
 
 
 # Simple Linear Regression 
+#https://www.kaggle.com/datasets/bumba5341/advertisingcsv
+#file can be found here
 
 df = pd.read_csv("advertising.csv")
 
